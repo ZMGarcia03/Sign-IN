@@ -31,3 +31,14 @@ elif answer == 'Mother':
     msgBoxPy.infobox(title='Listbox', message='Hi, Mom!')
 else:
     msgBoxPy.infobox(title='Listbox', message='Hi, family member!')
+    from tkinter import Tk
+import tkinter.messagebox as box
+
+def yesnobox(title='Title', message='Empty'):
+    '''Show Yes/No messagebox GUI and return answer'''
+    Tk().withdraw()
+    answer = box.askquestion(title, message)
+    return answer  # Returns 'yes' or 'no'
+    
+response = yesnobox('Title', 'Do you want to continue?') # Call function and pass title and message
+print(response) # Shows a 'yes' or 'no' response
